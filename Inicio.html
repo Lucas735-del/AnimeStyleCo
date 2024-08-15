@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeStyleCo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #01012b;
+            color: rgb(255, 0, 0);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        .banner {
+            position: relative;
+            text-align: center;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background: rgba(4, 3, 78, 0.5);
+            padding: 1rem;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .section {
+            padding: 2rem;
+            margin: 0 10%;
+        }
+
+        .produtos-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .produto {
+            border: 1px solid #000000;
+            padding: 1rem;
+            text-align: center;
+            background-color: white;
+            width: calc(25% - 2rem);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .produto img {
+            width: 100%;
+            height: auto;
+        }
+
+        .produto button {
+            background-color: #070572;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        .produto button:hover {
+            background-color: #ff0000;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .redes-sociais a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        .filtro {
+            background-color: rgb(1, 2, 56);
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .filtro form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .filtro label {
+            margin-right: 1rem;
+        }
+
+        .filtro select,
+        .filtro input {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+        }
+
+        .filtro button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        .filtro button:hover {
+            background-color: #020091;
+        }
+
+        .equipe {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .membro {
+            text-align: center;
+        }
+
+        .membro img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        form label {
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+        }
+
+        form button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+        .nav-link:hover {
+            color: #ff3333; /* Vermelho forte */
+        }
+        .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #003366; /* cor de fundo para o footer */
+    color: white; /* cor do texto no footer */
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000; /* garantir que o footer esteja acima do conteúdo */
+}
+
+.content {
+    padding-bottom: 60px; /* adicione espaço suficiente para o footer */
+}
+        
+    </style>
+</head>
+<body>
+    <div class="content">
+    <header>
+        <div class="logo">AnimeStyleCo</div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#produtos" class="nav-link">Produtos</a></li>
+                <li><a href="teste2.html" class="nav-link">Sobre nós</a></li>
+                <li><a href="Contato.html" class="nav-link">Contato</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="banner">
+            <img src="Banner1920x600.jpg" alt="Banner de AnimeStyleCo">
+            <div class="banner-text">
+                <h2>AnimeStyleCo</h2>
+                <p>O melhor do anime, agora no seu estilo</p>
+            </div>
+        </section>
+
+        <!-- Filtro de Produtos -->
+        <section id="filtro">
+            <h2>Preferências</h2>
+            <div class="filtro">
+                <form>
+                    <label for="cor">Cor:</label>
+                    <select id="cor" name="cor">
+                        <option value="Ambas">Ambas</option>
+                        <option value="branco">Branco</option>
+                        <option value="preto">Preto</option>
+                    </select>
+                    <label for="tamanho">Tamanho:</label>
+                    <select id="tamanho" name="tamanho">
+                        <option value="p">P</option>
+                        <option value="m">M</option>
+                        <option value="g">G</option>
+                        <option value="gg">GG</option>
+                        <option value="g1">G1</option>
+                        <option value="g2">G2</option>
+                        <option value="g3">G3</option>
+                        <option value="g4">G4</option>
+                        <option value="g5">G5</option>
+                    </select>
+                    <button type="submit">Filtrar</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Produtos Section -->
+        <section id="produtos" class="section">
+            <h2>Produtos</h2>
+            <div class="produtos-grid">
+                <div class="produto">
+                    <img src="anime1-preto.webp" alt="Produto 1">
+                    <h3>Camiseta Minimalista - Gojo Cartoon</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 1', 'Camiseta Minimalista - Gojo Cartoon', 42.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="Anime1.webp" alt="Produto 2">
+                    <h3>Camiseta Minimalista - Gojo Cartoon</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 2', 'Camiseta Minimalista - Gojo Cartoon', 42.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="Anime2.webp" alt="Produto 3">
+                    <h3>Camiseta - Gojo - Manga</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 3', 'Camiseta - Gojo - Manga', 42.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="Anime3.webp" alt="Produto 4">
+                    <h3>Camiseta - Cowboy Bebop</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 4', 'Camiseta - Cowboy Bebop', 42.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="anime4.webp" alt="Produto 5">
+                    <h3>Camiseta - Berserk - Guts V2</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 5', 'Camiseta - Berserk - Guts V2', 42.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="anime7.webp" alt="Produto 6">
+                    <h3>Camiseta - Majin</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 6', 'Camiseta - Majin', 42.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="anime8.webp" alt="Produto 7">
+                    <h3>Camiseta - Toji</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 7', 'Camiseta - Toji', 42.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="Anime9.webp" alt="Produto 8">
+                    <h3>Camiseta Minimal - Kon</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 8', 'Camiseta Minimal - Kon', 42.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="Anime21.jpg" alt="Produto 9">
+                    <h3>Camiseta - Mage Hands</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 9', 'Camiseta - Mage Hands', 42.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="anime10.jpg" alt="Produto 10">
+                    <h3>Camiseta - Kid Goku</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 10', 'Camiseta - Kid Goku', 42.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="anime11.jpg" alt="Produto 11">
+                    <h3>Camiseta - Vilões - Manga</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 11', 'Camiseta - Vilões - Manga', 42.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="anime14.webp" alt="Produto 12">
+                    <h3>Camiseta - Shadow Ghost</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 12', 'Camiseta - Shadow Ghost', 42.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="anime 15.webp" alt="Produto 13">
+                    <h3>Camiseta - Yu-Yu Hakusho</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 13', 'Camiseta - Yu-Yu Hakusho', 42.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="anime22.webp" alt="Produto 14">
+                    <h3>Camiseta - Survey BW</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 14', 'Camiseta - Survey BW', 42.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="anime17.webp" alt="Produto 15">
+                    <h3>Camiseta - Mob Psycho - Full Power</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 15', 'Camiseta - Mob Psycho - Full Power', 42.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="anime18.webp" alt="Produto 16">
+                    <h3>Camiseta - Demon Slayer</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 16', 'Camiseta - Demon Slayer', 42.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="anime 19.webp" alt="Produto 17">
+                    <h3>Camiseta - MUZAN</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 17', 'Camiseta - MUZAN', 42.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="anime20.webp" alt="Produto 18">
+                    <h3>Camiseta - SORCERER KILLER</h3>
+                    <p><del>R$ 60,00</del> <strong>R$ 42,00</strong></p>
+                    <button onclick="addToCart('Produto 18', 'Camiseta - SORCERER KILLER', 42.00)">Comprar</button>
+                </div>
+            </div>
+
+                <!-- Equipe Section -->
+        <section id="equipe" class="section">
+            <h2>Nossa Equipe</h2>
+            <div class="equipe">
+                <div class="membro">
+                    <img src="Equipe/Luiz Fernando1.jpg" alt="Membro 1">
+                    <h3>Luiz Fernando</h3>
+                    <p>Fundador & Analista de Mercado</p>
+                </div>
+                <div class="membro">
+                    <img src="Equipe/Thiago.jpg" alt="Membro 2">
+                    <h3>Thiago Lacerda</h3>
+                    <p>Fundador & Diretor Financeiro</p>
+                </div>
+                <div class="membro">
+                    <img src="Equipe/Lucas Gomes.jpg" alt="Membro 3">
+                    <h3>Lucas Gomes</h3>
+                    <p>Fundador & Diretor de Estratégias</p>
+                </div>
+                <div class="membro">
+                    <img src="Equipe/Rosália Victoria.jpg" alt="Membro 3">
+                    <h3>Rosalia Victoria</h3>
+                    <p>Fundadora & Gerente de Equipe</p>
+                </div>
+                <div class="membro">
+                    <img src="Equipe/Mathews Luckas1.jpg" alt="Membro 3">
+                    <h3>Mathews Luckas</h3>
+                    <p>Fundador & Designer</p>
+                </div>
+            </div>
+        </section>
+        <script>
+            function adicionarAoCarrinho(nome, preco) {
+                let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+                carrinho.push({ nome: nome, preco: preco });
+                localStorage.setItem('carrinho', JSON.stringify(carrinho));
+                alert('Produto adicionado ao carrinho!');
+            }
+        </script>
+
+        
+    </body>
+</html>
+                
+
+
+                
+                            
